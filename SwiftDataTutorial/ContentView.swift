@@ -6,19 +6,45 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @Environment (\.modelContext) private var context
+    @Query(sort: \CountryModel.code, order: .forward) var countries: [CountryModel]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(countries) {country in
+                        Text("\(country.code) - \(country.name)")
+                    }.onDelete(perform: { indexSet in
+                        let model = countries[indexSet.first!]
+                        context.delete(model)
+                    })
+                }
+                .navigationTitle("Countries")
+                .toolbar {
+                    Button(action: {
+                        countries.forEach{country in
+                            context.delete(country)
+                        }
+                    }, label: {
+                        Image(systemName: "trash.fill").foregroundStyle(Color.red)
+                    })
+                    
+                    Button(action: {
+                        context.insert(CountryModel.getRandomCountry())
+                    }, label: {
+                        Image(systemName: "plus.square.fill").foregroundStyle(Color.blue)
+                    })
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().modelContainer(for: CountryModel.self, inMemory: true)
 }

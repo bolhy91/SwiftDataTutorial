@@ -11,6 +11,7 @@
 		9E06016B2B151ADC00E819DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E06016A2B151ADC00E819DC /* ContentView.swift */; };
 		9E06016D2B151ADE00E819DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E06016C2B151ADE00E819DC /* Assets.xcassets */; };
 		9E0601702B151ADE00E819DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E06016F2B151ADE00E819DC /* Preview Assets.xcassets */; };
+		9E0601782B151B3700E819DC /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0601772B151B3700E819DC /* CountryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		9E06016A2B151ADC00E819DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E06016C2B151ADE00E819DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E06016F2B151ADE00E819DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E0601772B151B3700E819DC /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		9E0601792B1523BB00E819DC /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 		9E06015C2B151ADC00E819DC = {
 			isa = PBXGroup;
 			children = (
+				9E0601792B1523BB00E819DC /* .gitignore.md */,
 				9E0601672B151ADC00E819DC /* SwiftDataTutorial */,
 				9E0601662B151ADC00E819DC /* Products */,
 			);
@@ -51,6 +55,7 @@
 		9E0601672B151ADC00E819DC /* SwiftDataTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				9E0601762B151B2000E819DC /* Model */,
 				9E0601682B151ADC00E819DC /* SwiftDataTutorialApp.swift */,
 				9E06016A2B151ADC00E819DC /* ContentView.swift */,
 				9E06016C2B151ADE00E819DC /* Assets.xcassets */,
@@ -65,6 +70,14 @@
 				9E06016F2B151ADE00E819DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E0601762B151B2000E819DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E0601772B151B3700E819DC /* CountryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +152,7 @@
 			files = (
 				9E06016B2B151ADC00E819DC /* ContentView.swift in Sources */,
 				9E0601692B151ADC00E819DC /* SwiftDataTutorialApp.swift in Sources */,
+				9E0601782B151B3700E819DC /* CountryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
